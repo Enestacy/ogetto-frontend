@@ -7,6 +7,16 @@ export type Task = {
   createdAt: string
   Tag: {
     title: string
-  }
+  };
   done?: boolean
-}
+};
+
+export type Rank = {
+  name: string
+  max: number
+  lobby_title: {
+    hello: string
+    tasks: string
+    power: string
+  };
+};
