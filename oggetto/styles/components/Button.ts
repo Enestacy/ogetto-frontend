@@ -29,7 +29,13 @@ export const Button: ComponentStyleConfig = {
       fontSize: 'xl',
       px: 16,
       py: 8,
-    }
+    },
+    page: {
+      fontWeight: 'regular',
+    },
+    page_active: {
+      fontWeight: 'bold',
+    },
   },
   defaultProps: {
     variant: 'button',
