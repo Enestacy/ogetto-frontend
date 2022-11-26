@@ -1,7 +1,7 @@
-import { Box } from "@chakra-ui/react"
+import { PeopleContainer } from "../../src/components/People/PeopleContainer"
 
 export default function People() {
     return (
-        <Box>People</Box>
+        <PeopleContainer />
     )
 }

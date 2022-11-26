@@ -12,6 +12,7 @@ export const theme = extendTheme({
   },
   colors: {
     main: '#FFDD00',
+    second: '#FFEA60',
     black: {
       200: '#151515',
       500: '#151515',

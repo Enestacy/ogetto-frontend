@@ -9,7 +9,15 @@ export type Task = {
     title: string
   };
   done?: boolean
-};
+}
+
+export type Tag = {
+  title: string
+  User_Tags: {
+    TagId: string
+    UserId: string
+  }
+}
 
 export type Rank = {
   name: string
