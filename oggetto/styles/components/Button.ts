@@ -36,6 +36,14 @@ export const Button: ComponentStyleConfig = {
     page_active: {
       fontWeight: 'bold',
     },
+    power: {
+      color: 'black',
+      px: 10,
+      py: 7,
+      borderRadius: 3,
+      fontSize: 'xl',
+      bgColor: 'main',
+    },
   },
   defaultProps: {
     variant: 'button',

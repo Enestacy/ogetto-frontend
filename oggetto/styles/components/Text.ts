@@ -29,5 +29,20 @@ export const Text: ComponentStyleConfig = {
       fontWeight: 'regular',
       fontSize: 'md',
     },
+    lobby_title_hello: {
+      fontSize: '5xl',
+      fontWeight: 'extrabold',
+    },
+    lobby_title_tasks: {
+      fontSize: 'xl',
+      fontWeight: 'regular',
+    },
+    progress_title_big: {
+      fontSize: '2xl'
+    },
+    progress_title_big_pros: {
+      fontSize: '5xl',
+      fontWight: 'bold',
+    }
   },
 }
