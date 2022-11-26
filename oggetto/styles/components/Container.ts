@@ -10,6 +10,14 @@ export const Container: ComponentStyleConfig = {
       color: 'black',
       bgColor: 'main',
     },
+    header: {
+      display: 'flex',
+      w: '100%',
+      maxW: 'none',
+      px: 5,
+      justifyContent: 'space-between',
+      bgColor: 'main',
+    },
     default: {
       m: 0,
       p: 0,
