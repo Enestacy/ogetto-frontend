@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Image from 'next/image'
+import { Lobby } from '../src/components/Lobby/Lobby'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -10,13 +10,7 @@ export default function Home() {
         <meta name="description" content="Oggetto" />
         <link rel="icon" href="/icon.png" />
       </Head>
-
-      <main className={styles.main}>
-        контент
-      </main>
-
-      <footer className={styles.footer}>
-      </footer>
+      <Lobby />
     </div>
   )
 }
