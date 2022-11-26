@@ -1,11 +1,23 @@
-import { Box, Flex } from "@chakra-ui/react"
+import { Flex } from "@chakra-ui/react"
 import { Task as TypeTask } from "../../interfaces/task.interface"
 import { Task } from "./Task"
-import { tasks } from "../../../src/content/Tasks.json"
+import { useEffect, useState } from "react"
+import { getTasks } from "../../services/api/dataServices"
 
 export const TasksContainer = () => {
+    const [tasks, setTasks] = useState<TypeTask[]>([])
+
+    const getData = async () => {
+        const dataTasks = await getTasks()
+        setTasks(JSON.parse(dataTasks))
+    }
+
+    useEffect(() => {
+        getData()
+    }, [])
+
     return (
         <Flex gap={5} mt={5}
-        >{tasks.map((item) => <Task key={item.code} task={item} />)}</Flex>
+        >{tasks.length && tasks.map((item) => <Task key={item.code} task={item} />)}</Flex>
     )
 }
