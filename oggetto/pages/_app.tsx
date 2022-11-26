@@ -7,7 +7,7 @@ import { Header } from '../src/components/Header/Header'
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Container display={'flex'} p={0} justifyContent={'space-between'} flexDir="column" alignItems={'center'} h='100%' maxH={'100%'} maxW='100%'>
+      <Container display={'flex'} p={0} justifyContent={'flex-start'} flexDir="column" alignItems={'center'} h='100%' maxH={'100%'} maxW='100%'>
         <Header></Header>
         <Component {...pageProps} />
       </Container>

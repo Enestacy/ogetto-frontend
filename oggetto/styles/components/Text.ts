@@ -21,5 +21,13 @@ export const Text: ComponentStyleConfig = {
       fontWeight: 600,
       mb: 2,
     },
+    task_title: {
+      fontWeight: 'bold',
+      fontSize: '3xl',
+    },
+    task_description: {
+      fontWeight: 'regular',
+      fontSize: 'md',
+    },
   },
 }
