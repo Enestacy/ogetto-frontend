@@ -12,11 +12,11 @@ export const Container: ComponentStyleConfig = {
     },
     header: {
       display: 'flex',
+      flexDirection: 'row',
       w: '100%',
       maxW: 'none',
       px: 5,
       justifyContent: 'space-between',
-      bgColor: 'main',
     },
     task: {
       display: 'flex',
