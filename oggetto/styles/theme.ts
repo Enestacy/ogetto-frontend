@@ -12,6 +12,13 @@ export const theme = extendTheme({
   },
   colors: {
     main: '#FFDD00',
+    black: {
+      200: '#151515',
+      500: '#151515',
+    },
+    white: {
+      500: '#fff',
+    },
     gray: {
       50: '#DFE6E9',
       100: '#B2BEC3',
