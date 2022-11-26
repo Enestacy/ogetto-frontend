@@ -42,7 +42,16 @@ export const Text: ComponentStyleConfig = {
     },
     progress_title_big_pros: {
       fontSize: '5xl',
-      fontWight: 'bold',
+      fontWeight: 'bold',
+    },
+    people_card_title: {
+      fontSize: 'xl',
+      fontWeight: 'bold',
+    },
+    people_card_position: {
+      fontSize: 'sm',
+      ml: 5,
+      color: 'gray',
     }
   },
 }
