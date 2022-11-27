@@ -1,9 +1,11 @@
 import { Box, Flex } from "@chakra-ui/react"
-import { useState } from "react"
+import { useRouter } from "next/router"
+import { useEffect, useState } from "react"
 import { Page } from "../../interfaces/navigation.interface"
 import { NavigationItem } from "./NavigationItem"
 
 export const Navigation = () => {
+    const router = useRouter()
     const [page, setPage] = useState<Page[]>([
         {
             name: 'Home',
@@ -42,6 +44,15 @@ export const Navigation = () => {
             }),
         ])
     }
+
+    useEffect(() => {
+        setPage((prev) => (
+            prev.map((item) => ({
+                ...item,
+                isActive: item.href === router.asPath
+            }))
+        ))
+    }, [])
 
     return (
         <Flex align={'center'}>
