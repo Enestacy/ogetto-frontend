@@ -9,6 +9,7 @@ export type Task = {
     title: string
   };
   done?: boolean
+  category: string
 }
 
 export type Tag = {
