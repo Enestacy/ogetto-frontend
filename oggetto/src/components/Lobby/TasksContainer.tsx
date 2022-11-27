@@ -9,7 +9,8 @@ export const TasksContainer = () => {
 
     const getData = async () => {
         const dataTasks = await getTasks(localStorage.getItem("id") || '')
-        setTasks(JSON.parse(dataTasks))
+        const t = JSON.parse(dataTasks)
+        setTasks(t.Tasks)
     }
 
     useEffect(() => {
