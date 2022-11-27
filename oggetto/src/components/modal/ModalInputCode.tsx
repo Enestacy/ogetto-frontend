@@ -1,9 +1,36 @@
-import { Box, Button, Flex, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text } from "@chakra-ui/react"
+import { Box, Button, Flex, Image, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, Text, useToast } from "@chakra-ui/react"
+import { User } from "../../interfaces/user.interface"
+import { patchInputCode } from "../../services/api/dataServices"
 
 export const ModalInputCode = ({ isOpen, onClose, task }: any) => {
-
-    const handleOkClick = () => {
-        console.log('task = ', task)
+    const user: User = JSON.parse(localStorage.getItem("user") || '')
+    const toast = useToast()
+    const handleOkClick = async () => {
+        const body = {
+            taskCode: task.code,
+            userId: user.id,
+            myRating: user.rating,
+        }
+        const res = await patchInputCode(JSON.stringify(body))
+        const dataRes = JSON.parse(res)
+        console.log('res = ', dataRes.status)
+        if (dataRes.status !== 200) {
+            toast({
+                title: 'ERROR',
+                description: dataRes.message,
+                status: 'error',
+                duration: 9000,
+                isClosable: true,
+            })
+            return
+        }
+        toast({
+            title: 'Успешно',
+            description: dataRes.message,
+            status: 'success',
+            duration: 9000,
+            isClosable: true,
+        })
     }
 
     return (

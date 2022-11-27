@@ -12,14 +12,12 @@ export const Task = ({ task, isDone, isMyTask }: Props) => {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     const handleTaskClick = (task: TypeTask) => {
-        if (isMyTask) {
-            onOpen()
-            return
-        }
+        if (isMyTask) return
+        onOpen()
     }
 
     return (
-        <Button variant={'open_task'} onClick={() => handleTaskClick(task)}>
+        <Button variant={'open_task'} cursor={isMyTask ? 'default' : 'pointer'} onClick={() => handleTaskClick(task)}>
             <ModalInputCode isOpen={isOpen} onClose={onClose} task={task} />
             <Container variant={isDone ? 'task_done' : 'task'}>
                 <Flex justify={'space-between'} align={'center'}>
@@ -29,7 +27,13 @@ export const Task = ({ task, isDone, isMyTask }: Props) => {
                     </Flex>
                     {isDone ? <Container w={24} bgColor={'black'} color={'white'} variant={'task_tag'}>
                         DONE
-                    </Container> : <Text>{task.code}</Text>}
+                    </Container> : (
+                        isMyTask ?
+                            <Text>{task.code}</Text> :
+                            <Container w={24} bgColor={'black'} color={'white'} variant={'task_tag'}>
+                                CODE
+                            </Container>
+                    )}
                 </Flex>
                 <Box h={'100%'}>
                     <Text variant={'task_title'}>
