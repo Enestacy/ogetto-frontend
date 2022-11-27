@@ -1,4 +1,5 @@
 import { Box, Flex, Progress, Text } from "@chakra-ui/react"
+import { rankName } from "../../content/RankRule.json"
 import { useMemo } from "react"
 
 type Props = {
@@ -39,7 +40,7 @@ export const ProgressCustom = ({ size, value }: Props) => {
                     <Box w={(calcSize * 0.7)} h={(calcSize * 0.7)} borderRadius={"100"} sx={{ borderRadius: '100% !important' }} top={0} right={0} bgColor={'black'} >
                         <Flex color={'white'} p={10} w={'100%'} h={'100%'} align={'flex-start'} justify={'center'} flexDir={'column'}>
                             <Text variant={`progress_title_${size}_pros`}>{`${100 - value}%`}</Text>
-                            <Text variant={`progress_title_${size}`}>до уровня Юный падаван</Text>
+                            <Text variant={`progress_title_${size}`}>до уровня {rankName.filter((item) => item.max >= value)[1].name}</Text>
                         </Flex>
 
                     </Box>
