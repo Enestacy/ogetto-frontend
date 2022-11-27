@@ -1,4 +1,4 @@
-import { Tag } from "./task.interface";
+import { Rank, Tag } from "./task.interface";
 
 export type User = {
   id: string
@@ -9,7 +9,7 @@ export type User = {
   firstName: string
   lastName: string
   position: string
-  rank?: string
+  rank?: Rank
   grade: string
   office: string
   tags: string[]
