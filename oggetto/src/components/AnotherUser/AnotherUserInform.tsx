@@ -35,7 +35,7 @@ export const AnotherUserInform = ({ user }: Props) => {
                     display={'flex'}
                     alignItems={'flex-end'}
                     justifyContent={'flex-end'}
-                ><Image src={`assets/status_${user.status}.png`} /></Box>
+                >{user.status && <Image src={`assets/status_${user.status}.png`} />}</Box>
                 <Flex ml={5} flexDir={'column'} gap={5}>
                     <Text variant={'another_user_inform_title'}>{user?.firstName}{' '}{user?.lastName}{' '}{user?.surname}</Text>
                     <Flex justify={'space-between'}>
