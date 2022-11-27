@@ -2,7 +2,7 @@
 import { Box, Container, Flex, IconButton, Image, Spinner, Text } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import { TagsContainer } from '../../src/components/People/TagsContainer'
+import { AnotherUser } from '../../src/components/AnotherUser/AnotherUser'
 import { User } from '../../src/interfaces/user.interface'
 import { getUser } from '../../src/services/api/baseRequests'
 
@@ -19,34 +19,14 @@ export default function HomeUser() {
     }
 
     useEffect(() => {
-        if (isLoading) getData()
+        getData()
     }, [])
 
     return (
         <>
             {
                 isLoading ? <Spinner /> :
-                    <Container variant={'people_advice_card'}>
-                        <Flex>
-                            <Box w={24} h={24} backgroundSize={"cover"} backgroundImage={'url(assets/images/avatar_1.png)'} borderRadius={100} />
-                            <Flex ml={5} flexDir={'column'} gap={5}>
-                                <Text variant={'people_card_title'}>{user?.firstName}{' '}{user?.lastName}</Text>
-                                <Flex align={'center'} flexDir={'row'}>
-                                    <Image src={'assets/location.png'} />
-                                    <Text variant={'people_card_position'}>
-                                        {user?.office}
-                                    </Text>
-                                </Flex>
-                                <Flex align={'center'} flexDir={'row'}>
-                                    <Image src={'assets/position.png'} />
-                                    <Text variant={'people_card_position'}>
-                                        {user?.position}
-                                    </Text>
-                                </Flex>
-                            </Flex>
-                        </Flex>
-                        {user?.Tags && <TagsContainer tags={user?.Tags} />}
-                    </Container>
+                    user && <AnotherUser user={user} />
             }
         </>
     )

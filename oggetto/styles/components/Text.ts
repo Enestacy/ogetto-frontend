@@ -52,6 +52,15 @@ export const Text: ComponentStyleConfig = {
       fontSize: 'sm',
       ml: 5,
       color: 'gray',
-    }
+    },
+    another_user_inform_title: {
+      fontSize: '2xl',
+      fontWeight: 'bold',
+    },
+    another_user_inform_subtitle: {
+      fontSize: 'md',
+      color: 'gray',
+      fontWeight: 'bold',
+    },
   },
 }
