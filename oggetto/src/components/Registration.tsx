@@ -19,11 +19,18 @@ export const Registration = () => {
     const checkLogin = () => {
         const t = () => {
             switch (login) {
-                case 'name':
-                    if (password === '123') return (true)
+                case 'user':
+                    if (password === '123') {
+                        localStorage.setItem("id", "59a73d80-6ce0-11ed-bbdc-97667bccac03")
+                        return (true)
+                    }
                     return (false)
                 case 'admin':
-                    if (password === '123') return (true)
+                    if (password === '123') {
+                        localStorage.setItem("id", "bb275be8-6cd7-11ed-a1eb-0242ac120002")
+                        return (true)
+                    }
+
                     return (false)
                 default:
                     return (false);
@@ -43,8 +50,6 @@ export const Registration = () => {
         setIsLoad(true)
         checkLogin()
     }
-
-
 
     return (
         <Container variant={'registration'}>

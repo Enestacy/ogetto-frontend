@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 import { useState } from "react"
 import { Page } from "../../interfaces/navigation.interface"
 import { NavigationItem } from "./NavigationItem"
@@ -20,6 +20,11 @@ export const Navigation = () => {
             isActive: false,
             href: '/events'
         },
+        {
+            name: 'Log out',
+            isActive: false,
+            href: '/registration'
+        },
     ])
 
     const onPageClick = (indexCurrentPage: number) => {
@@ -39,7 +44,7 @@ export const Navigation = () => {
     }
 
     return (
-        <Box>
+        <Flex align={'center'}>
             {page.map((item, index) =>
                 <NavigationItem
                     key={item.href}
@@ -48,6 +53,6 @@ export const Navigation = () => {
                     onPageClick={onPageClick}
                 />
             )}
-        </Box>
+        </Flex>
     )
 }
