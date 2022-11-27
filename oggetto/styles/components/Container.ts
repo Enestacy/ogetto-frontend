@@ -130,12 +130,26 @@ export const Container: ComponentStyleConfig = {
       boxShadow: '0px 16px 50px 10px rgba(183, 183, 183, 0.2)',
       bgColor: 'white',
       border: '2px solid',
-      // borderColor: 'main',
       m: 0,
       p: 5,
       minH: 'xs',
       maxW: '80',
-      // minW: 80,
+    },
+    another_user: {
+      w: '100%',
+      p: 20,
+      justifyContent: 'space-between',
+      maxW: 'none',
+      m: 0,
+      display: 'flex',
+      flexDir: 'row',
+    },
+    another_user_inform: {
+      m: 0,
+      mawW: 'none',
+      p:0,
+      display: 'flex',
+      flexDir: 'column',
     }
   },
   defaultProps: {
