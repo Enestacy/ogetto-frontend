@@ -13,14 +13,19 @@ export default function HomeUser() {
     const id = router.query.id as string
 
     const getData = async () => {
-        const dataUser = await getUser(id)
+        const dataUser = await getUser(id || localStorage.getItem("another_user"))
         setUser(JSON.parse(dataUser))
         setIsLoading(false)
     }
 
     useEffect(() => {
+        localStorage.setItem("another_user", id)
         getData()
     }, [])
+
+    useEffect(() => {
+        setIsLoading(false)
+    }, [router])
 
     return (
         <>

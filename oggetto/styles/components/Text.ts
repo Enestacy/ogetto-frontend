@@ -62,5 +62,9 @@ export const Text: ComponentStyleConfig = {
       color: 'gray',
       fontWeight: 'bold',
     },
+    lobby_inform_title: {
+      fontSize: 'xl',
+      fontWeight: 'bold'
+    }
   },
 }
