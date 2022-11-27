@@ -15,7 +15,7 @@ export const AdviceCard = ({ user, goToPage }: Props) => {
     return (
         <Container variant={'people_advice_card'}>
             <Flex>
-                <Box w={24} h={24} backgroundSize={"cover"} backgroundImage={'url(assets/images/avatar_1.png)'} borderRadius={100} />
+                <Box w={24} h={24} backgroundSize={"cover"} backgroundImage={`url(assets/images/avatar_${user.id}.png)`} borderRadius={100} />
                 <Flex ml={5} flexDir={'column'} gap={5}>
                     <Text variant={'people_card_title'}>{user.firstName}{' '}{user.lastName}</Text>
                     <Flex align={'center'} flexDir={'row'}>

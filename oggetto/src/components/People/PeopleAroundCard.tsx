@@ -16,7 +16,7 @@ export const PeopleAroundCard = ({ goToPage, border, user }: Props) => {
     return (
         <Container variant={'people_around_card'} borderColor={border} gap={5}>
             <Flex flexDir={'column'} alignItems={'center'} gap={5}>
-                <Box w={24} h={24} backgroundSize={"cover"} backgroundImage={'url(assets/images/avatar_1.png)'} borderRadius={100} />
+                <Box w={24} h={24} backgroundSize={"cover"} backgroundImage={`url(assets/images/avatar_${user.id}.png)`} borderRadius={100} />
                 <Text variant={'people_card_title'}>{user.firstName}{' '}{user.lastName}</Text>
                 <Flex ml={5} flexDir={'column'} gap={5}>
                     <Flex align={'center'} flexDir={'row'}>

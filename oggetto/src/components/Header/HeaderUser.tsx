@@ -5,7 +5,7 @@ import { User } from "../../interfaces/user.interface"
 export const HeaderUser = ({ user, rank }: { user: User, rank: Rank }) => {
     return (
         <Flex align={'center'} gap={2} mt={2}>
-            <Box backgroundSize={"cover"} backgroundImage={'url(assets/images/avatar_1.png)'} borderRadius={100} h={16} w={16} />
+            <Box backgroundSize={"cover"} backgroundImage={`url(assets/images/avatar_${user.id}.png)`} borderRadius={100} h={16} w={16} />
             <Flex flexDir={'column'}>
                 <Text fontWeight={'bold'} fontSize={'lg'}>{`${user.firstName} ${user.lastName}`}</Text>
                 <Text>{rank.name}</Text>

@@ -29,6 +29,9 @@ export const Task = ({ task }: Props) => {
                 <Container variant={'task_tag'} bgColor={task.done ? 'white' : 'main'}>
                     #{task.Tag.title}
                 </Container>
+                <Container variant={'task_tag'} bgColor={'black'} color={'white'}>
+                    #{task.category}
+                </Container>
             </Flex>
         </Container>
     )
