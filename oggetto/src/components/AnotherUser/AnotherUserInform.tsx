@@ -44,7 +44,7 @@ export const AnotherUserInform = ({ user }: Props) => {
             </Flex>
             <Flex mt={10} flexDir={'column'} gap={6}>
                 <Text variant={'another_user_inform_title'}>Обо мне: </Text>
-                <Text ml={8} fontWeight={'bold'}>{user.about}</Text>
+                <Text fontWeight={'bold'}>{user.about}</Text>
             </Flex>
         </Container>
     )
