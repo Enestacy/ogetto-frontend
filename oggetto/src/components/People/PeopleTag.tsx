@@ -3,10 +3,10 @@ import { Tag as TypeTag } from "../../interfaces/task.interface"
 
 type Props = {
     tag: TypeTag
+    isActive: boolean
 }
 
-export const PeopleTag = ({ tag }: Props) => {
-    return (<Container variant={'people_tag'}>
-        {tag.title}
-    </Container>)
-}
+export const PeopleTag = ({ tag, isActive }: Props) =>
+(<Container variant={isActive ? 'people_tag_active' : 'people_tag'}>
+    {tag.title}
+</Container>)

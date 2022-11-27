@@ -106,6 +106,7 @@ export const Container: ComponentStyleConfig = {
       bgColor: 'gray.100',
     },
     people_tag_active: {
+      w: 'auto',
       borderRadius: 5,
       m:0,
       bgColor: 'main',

@@ -8,7 +8,6 @@ type Props = {
 }
 
 export const AdviceCard = ({ user, goToPage }: Props) => {
-
     const handleGoClick = (id: string) => {
         goToPage(id)
     }
