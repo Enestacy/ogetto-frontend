@@ -8,9 +8,20 @@ export const get = (path: string) => (
     .then((res) => res.text())
 )
 
-export const getUser = (id: string) => (
+export const getUser = (id: string | null) => (
   fetch(`${baseUrl}/user/${id}`, {
     method: 'GET',
+  })
+    .then((res) => res.text())
+)
+
+export const patch = (path: string, body: any) => (
+  fetch(`${baseUrl}/${path}`, {
+    headers: {
+      "Content-Type" :  "application/json; charset=utf-8",
+    },
+    method: 'PATCH',
+    body,
   })
     .then((res) => res.text())
 )
