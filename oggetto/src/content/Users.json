@@ -1,0 +1,160 @@
+{ "users" : [
+    {
+        "id": "937201d0-6d35-11ed-bcfa-d3033dd63e33",
+        "firstName": "Lol",
+        "surname": null,
+        "lastName": "Kek",
+        "rating": 20,
+        "position": "Главный по мемам",
+        "about": "Playboy developer",
+        "office": "ТЦ «Андреевский",
+        "tg": null,
+        "status": null,
+        "date_of_birth": null,
+        "grade": null,
+        "current_project": null,
+        "Tags": [
+            {
+                "title": "юмор",
+                "User_Tags": {
+                    "TagId": "ea88d442-6d05-11ed-a1eb-0242ac120003",
+                    "UserId": "937201d0-6d35-11ed-bcfa-d3033dd63e33"
+                }
+            },
+            {
+                "title": "животные",
+                "User_Tags": {
+                    "TagId": "2b99c1d0-6d33-11ed-bbb0-e57e27a15e12",
+                    "UserId": "937201d0-6d35-11ed-bcfa-d3033dd63e33"
+                }
+            }
+        ]
+    },
+    {
+        "id": "8032a56e-6cc4-11ed-a1eb-0242ac120002",
+        "firstName": "Иван",
+        "surname": null,
+        "lastName": "Иванов",
+        "rating": 0,
+        "position": "Фронтенд-разработчик",
+        "about": "Пью пиво живу красиво",
+        "office": "ТЦ «Андреевский",
+        "tg": null,
+        "status": null,
+        "date_of_birth": null,
+        "grade": null,
+        "current_project": null,
+        "Tags": []
+    },
+    {
+        "id": "59a73d80-6ce0-11ed-bbdc-97667bccac03",
+        "firstName": "Супер",
+        "surname": null,
+        "lastName": "Чел",
+        "rating": 0,
+        "position": "Мастер Кек",
+        "about": "Я супер!",
+        "office": "ТЦ «Андреевский»",
+        "tg": null,
+        "status": null,
+        "date_of_birth": null,
+        "grade": null,
+        "current_project": null,
+        "Tags": []
+    },
+    {
+        "id": "bb275be8-6cd7-11ed-a1eb-0242ac120002",
+        "firstName": "Чебурек",
+        "surname": null,
+        "lastName": "Кек",
+        "rating": 50,
+        "position": "Бэк-енд разраб",
+        "about": "ЛОЛ",
+        "office": "ТЦ «Андреевский",
+        "tg": null,
+        "status": null,
+        "date_of_birth": null,
+        "grade": null,
+        "current_project": null,
+        "Tags": []
+    },
+    {
+        "id": "937201d0-6d35-11ed-bcfa-d3033dd63e33",
+        "firstName": "Lol",
+        "surname": null,
+        "lastName": "Kek",
+        "rating": 20,
+        "position": "Главный по мемам",
+        "about": "Playboy developer",
+        "office": "ТЦ «Андреевский",
+        "tg": null,
+        "status": null,
+        "date_of_birth": null,
+        "grade": null,
+        "current_project": null,
+        "Tags": [
+            {
+                "title": "юмор",
+                "User_Tags": {
+                    "TagId": "ea88d442-6d05-11ed-a1eb-0242ac120003",
+                    "UserId": "937201d0-6d35-11ed-bcfa-d3033dd63e33"
+                }
+            },
+            {
+                "title": "животные",
+                "User_Tags": {
+                    "TagId": "2b99c1d0-6d33-11ed-bbb0-e57e27a15e12",
+                    "UserId": "937201d0-6d35-11ed-bcfa-d3033dd63e33"
+                }
+            }
+        ]
+    },
+    {
+        "id": "8032a56e-6cc4-11ed-a1eb-0242ac120002",
+        "firstName": "Иван",
+        "surname": null,
+        "lastName": "Иванов",
+        "rating": 0,
+        "position": "Фронтенд-разработчик",
+        "about": "Пью пиво живу красиво",
+        "office": "ТЦ «Андреевский",
+        "tg": null,
+        "status": null,
+        "date_of_birth": null,
+        "grade": null,
+        "current_project": null,
+        "Tags": []
+    },
+    {
+        "id": "59a73d80-6ce0-11ed-bbdc-97667bccac03",
+        "firstName": "Супер",
+        "surname": null,
+        "lastName": "Чел",
+        "rating": 0,
+        "position": "Мастер Кек",
+        "about": "Я супер!",
+        "office": "ТЦ «Андреевский»",
+        "tg": null,
+        "status": null,
+        "date_of_birth": null,
+        "grade": null,
+        "current_project": null,
+        "Tags": []
+    },
+    {
+        "id": "bb275be8-6cd7-11ed-a1eb-0242ac120002",
+        "firstName": "Чебурек",
+        "surname": null,
+        "lastName": "Кек",
+        "rating": 50,
+        "position": "Бэк-енд разраб",
+        "about": "ЛОЛ",
+        "office": "ТЦ «Андреевский",
+        "tg": null,
+        "status": null,
+        "date_of_birth": null,
+        "grade": null,
+        "current_project": null,
+        "Tags": []
+    }
+]}
