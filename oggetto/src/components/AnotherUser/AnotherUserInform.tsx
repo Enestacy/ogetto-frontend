@@ -1,4 +1,4 @@
-import { Box, Container, Flex, Image, Text } from "@chakra-ui/react"
+import { Box, Container, Flex, Image, Link, Text } from "@chakra-ui/react"
 import { useMemo } from "react"
 import { Rank } from "../../interfaces/task.interface"
 import { User } from "../../interfaces/user.interface"
@@ -35,16 +35,23 @@ export const AnotherUserInform = ({ user }: Props) => {
                     display={'flex'}
                     alignItems={'flex-end'}
                     justifyContent={'flex-end'}
-                ><Image src={'assets/status_active.png'} /></Box>
+                ><Image src={`assets/status_${user.status}.png`} /></Box>
                 <Flex ml={5} flexDir={'column'} gap={5}>
                     <Text variant={'another_user_inform_title'}>{user?.firstName}{' '}{user?.lastName}{' '}{user?.surname}</Text>
-                    <Text variant={'another_user_inform_subtitle'}>{`${user?.position} и ${rank.name}`}</Text>
+                    <Flex justify={'space-between'}>
+                        <Text variant={'another_user_inform_subtitle'}>{`${user?.position} и ${rank.name}`}</Text>
+                        <Text variant={'another_user_inform_subtitle'}>{user?.date_of_birth}</Text>
+                    </Flex>
                     {user?.Tags && <TagsContainer tags={user?.Tags} />}
                 </Flex>
             </Flex>
             <Flex mt={10} flexDir={'column'} gap={6}>
                 <Text variant={'another_user_inform_title'}>Обо мне: </Text>
                 <Text fontWeight={'bold'}>{user.about}</Text>
+            </Flex>
+            <Flex mt={6} alignItems={'center'}>
+                <Image src={'assets/telegram.png'} />
+                <Link ml={3} href={`https://t.me/${user.tg}`}>{user.tg}</Link>
             </Flex>
         </Container>
     )
