@@ -8,7 +8,7 @@ export const TasksContainer = () => {
     const [tasks, setTasks] = useState<TypeTask[]>([])
 
     const getData = async () => {
-        const dataTasks = await getTasks()
+        const dataTasks = await getTasks(localStorage.getItem("id") || '')
         setTasks(JSON.parse(dataTasks))
     }
 
