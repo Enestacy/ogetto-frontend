@@ -1,35 +1,36 @@
-import { Box, Flex } from "@chakra-ui/react"
-import { useRouter } from "next/router"
-import { useEffect, useState } from "react"
-import { Page } from "../../interfaces/navigation.interface"
-import { NavigationItem } from "./NavigationItem"
+import { Box, Flex } from "@chakra-ui/react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { Page } from "../../interfaces/navigation.interface";
+import { NavigationItem } from "./NavigationItem";
 
 export const Navigation = () => {
-    const router = useRouter()
+    const router = useRouter();
     const [page, setPage] = useState<Page[]>([
         {
-            name: 'Home',
+            name: "Home",
             isActive: true,
-            href: '/'
+            href: "/",
         },
         {
-            name: 'People',
+            name: "People",
             isActive: false,
-            href: '/people'
+            href: "/people",
         },
         {
-            name: 'Events',
+            name: "Events",
             isActive: false,
-            href: '/events'
+            href: "/events",
         },
         {
-            name: 'Log out',
+            name: "Log out",
             isActive: false,
-            href: '/registration'
+            href: "/registration",
         },
-    ])
+    ]);
 
     const onPageClick = (indexCurrentPage: number) => {
+        if (page[indexCurrentPage].href === "/registration") localStorage.clear();
         setPage((prev) => [
             ...prev.map((item, index) => {
                 if (index === indexCurrentPage)
@@ -42,28 +43,28 @@ export const Navigation = () => {
                     isActive: false,
                 };
             }),
-        ])
-    }
+        ]);
+    };
 
     useEffect(() => {
-        setPage((prev) => (
+        setPage((prev) =>
             prev.map((item) => ({
                 ...item,
-                isActive: item.href === router.asPath
+                isActive: item.href === router.asPath,
             }))
-        ))
-    }, [])
+        );
+    }, [router.asPath]);
 
     return (
-        <Flex align={'center'}>
-            {page.map((item, index) =>
+        <Flex align={"center"}>
+            {page.map((item, index) => (
                 <NavigationItem
                     key={item.href}
                     page={item}
                     index={index}
                     onPageClick={onPageClick}
                 />
-            )}
+            ))}
         </Flex>
-    )
-}
+    );
+};
